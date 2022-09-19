@@ -34,20 +34,26 @@
       // TODO: Buatlah sebuah fungsi dengan nama fnClickHandler
       // Fungsi yang digunakan untuk menambahkan tulisan
       // Jangan ubah cara deklarasi fungsinya, cukup isi saja
-      function fnClickHandler(toDoItem) {}
+      function fnClickHandler(toDoItem) {
+        let li = document.createElement('li');
+        li.appendChild(document.createTextNode(input.value));
+        output.appendChild(li);
+        input.value = "";
+      }
 
       // TODO: register event onclick / addEventListener untuk button
       // akan menjalankan fungsi fnClickHandler
       button.addEventListener('click', ()=> {
-        fnClickHandler;
+        fnClickHandler();
       });
       // TODO: register event onkeypress / addEventListener untuk input
       // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
       input.addEventListener('keyup', (event)=> {
         if (event.key === 'Enter'){
-          fnClickHandler;
+          fnClickHandler();
         }
       });
     </script>
   </body>
 </html>
+
