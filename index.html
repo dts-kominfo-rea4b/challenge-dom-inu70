@@ -39,6 +39,7 @@
         li.appendChild(document.createTextNode(input.value));
         output.appendChild(li);
         input.value = "";
+Return li;
       }
 
       // TODO: register event onclick / addEventListener untuk button
@@ -48,10 +49,9 @@
       });
       // TODO: register event onkeypress / addEventListener untuk input
       // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
-      input.addEventListener('keyUp', (event)=> {
-        if (event.key === 'Enter'){
+      input.addEventListener('keyup', (event)=> {
+        if (event.keyup === 'Enter'){
           fnClickHandler();
-          Document.write('<br>);
         }
       });
     </script>
