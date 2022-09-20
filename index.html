@@ -48,9 +48,10 @@
       });
       // TODO: register event onkeypress / addEventListener untuk input
       // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
-      input.addEventListener('keyPress', (event)=> {
+      input.addEventListener('keyUp', (event)=> {
         if (event.key === 'Enter'){
           fnClickHandler();
+          Document.write('<br>);
         }
       });
     </script>
